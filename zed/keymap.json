@@ -1,0 +1,67 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-q": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      "ctrl-shift-e": "project_panel::ToggleFocus",
+      "ctrl-shift-g": "git_panel::ToggleFocus",
+      "ctrl-b": "workspace::ToggleRightDock",
+      "alt-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+      // page scroll + recenter
+      "space v": "workspace::NewFileSplitVertical",
+      "space x": "workspace::NewFileSplitHorizontal",
+      "space h": "workspace::ActivatePaneLeft",
+      "space l": "workspace::ActivatePaneRight",
+      "space k": "workspace::ActivatePaneUp",
+      "space j": "workspace::ActivatePaneDown",
+
+      "space f": "file_finder::Toggle",
+      "space p": "editor::Format",
+      "space s": "buffer_search::Deploy",
+      "space /": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-m": "workspace::ToggleZoom",
+      "ctrl-/": "pane::SplitAndMoveRight",
+      "ctrl-Right": "workspace::ActivateNextPane",
+      "ctrl-Left": "workspace::ActivatePreviousPane"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"]
+    }
+  },
+  {
+    "context": "Editor && !menu && vim_mode == normal",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem"
+    }
+  }
+]
