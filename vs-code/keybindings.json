@@ -74,37 +74,40 @@
 
   /* CLIPBOARD */
   // Copy
-  {
-    "key": "ctrl+c",
-    "command": "runCommands",
-    "args": {
-      "commands": ["editor.action.clipboardCopyAction", "extension.vim_escape"]
-    },
-    "when": "editorTextFocus"
-  },
+  // {
+  //   "key": "ctrl+c",
+  //   "command": "runCommands",
+  //   "args": {
+  //     "commands": ["editor.action.clipboardCopyAction", "extension.vim_escape"]
+  //   },
+  //   "when": "editorTextFocus"
+  // },
+
   // Cut
-  {
-    "key": "ctrl+x",
-    "command": "runCommands",
-    "args": {
-      "commands": ["editor.action.clipboardCutAction", "extension.vim_escape"]
-    },
-    "when": "editorTextFocus"
-  },
+  // {
+  //   "key": "ctrl+x",
+  //   "command": "runCommands",
+  //   "args": {
+  //     "commands": ["editor.action.clipboardCutAction", "extension.vim_escape"]
+  //   },
+  //   "when": "editorTextFocus"
+  // },
+
   // Paste
-  {
-    "key": "ctrl+v",
-    "command": "editor.action.clipboardPasteAction",
-    "when": "editorTextFocus"
-  },
+  // {
+  //   "key": "ctrl+v",
+  //   "command": "editor.action.clipboardPasteAction",
+  //   "when": "editorTextFocus"
+  // },
 
   /* EXTRAS */
   // Override visual block command
-  {
-    "key": "ctrl+shift+v",
-    "command": "extension.vim_ctrl+v",
-    "when": "editorTextFocus"
-  },
+  // {
+  //   "key": "ctrl+shift+v",
+  //   "command": "extension.vim_ctrl+v",
+  //   "when": "editorTextFocus"
+  // },
+
   // Switch projects
   {
     "key": "ctrl+shift+q",

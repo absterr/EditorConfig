@@ -34,9 +34,13 @@
       "space j": "workspace::ActivatePaneDown",
 
       "space f": "file_finder::Toggle",
-      "space p": "editor::Format",
+      "space i": "editor::Format",
       "space s": "buffer_search::Deploy",
-      "space /": "editor::ToggleComments"
+      "space /": "editor::ToggleComments",
+
+      "space y": "editor::Copy",
+      "space d": "editor::Cut",
+      "space p": "editor::Paste"
     }
   },
   {
