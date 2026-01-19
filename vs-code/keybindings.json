@@ -21,7 +21,6 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-
   /* SIDEBAR */
   {
     "key": "ctrl+b",
@@ -71,7 +70,12 @@
     "key": "ctrl+shift+x",
     "when": "editorTextFocus"
   },
-
+  // Switch projects
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.openRecent",
+    "when": "editorTextFocus"
+  }
   /* CLIPBOARD */
   // Copy
   // {
@@ -82,7 +86,6 @@
   //   },
   //   "when": "editorTextFocus"
   // },
-
   // Cut
   // {
   //   "key": "ctrl+x",
@@ -92,14 +95,12 @@
   //   },
   //   "when": "editorTextFocus"
   // },
-
   // Paste
   // {
   //   "key": "ctrl+v",
   //   "command": "editor.action.clipboardPasteAction",
   //   "when": "editorTextFocus"
   // },
-
   /* EXTRAS */
   // Override visual block command
   // {
@@ -107,11 +108,4 @@
   //   "command": "extension.vim_ctrl+v",
   //   "when": "editorTextFocus"
   // },
-
-  // Switch projects
-  {
-    "key": "ctrl+shift+q",
-    "command": "workbench.action.openRecent",
-    "when": "editorTextFocus"
-  }
 ]
