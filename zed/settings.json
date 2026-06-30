@@ -7,6 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+      "enable_thinking": true
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "wsl_connections": [
+    {
+      "distro_name": "Ubuntu",
+      "user": null,
+      "projects": [
+        {
+          "paths": [
+            "/home/absterr"
+          ]
+        },
+        {
+          "paths": [
+            "/home/absterr/projects/typescript/faith-senpai/./"
+          ]
+        }
+      ]
+    },
+    {
+      "distro_name": "archlinux",
+      "user": null,
+      "projects": []
+    }
+  ],
   "restore_on_startup": "last_workspace",
   "icon_theme": "Symbols Icon Theme",
   "tabs": { "file_icons": true },
@@ -35,12 +75,14 @@
   "terminal": {
     "shell": {
       "program": "C:\\Program Files\\Git\\bin\\bash.exe"
-    }
+    },
+    "font_family": "JetBrainsMono Nerd Font"
   },
   "git": {
     "inline_blame": { "enabled": false }
   },
   "git_panel": {
+    "tree_view": true,
     "dock": "right",
     "default_width": 280
   },
@@ -52,7 +94,11 @@
 
   "ui_font_size": 14,
   "buffer_font_size": 12,
-  "theme": "GitHub Dark Default",
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Vercel Dark"
+  },
 
   "lsp": {
     "tailwindcss-language-server": {
@@ -60,6 +106,34 @@
         "classFunctions": ["cva", "cx"],
         "experimental": {
           "classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"]
+        }
+      }
+    },
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "analysis": {
+            "typeCheckingMode": "recommended",
+            "autoImportCompletions": true
+          }
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "keyOrdering": true,
+          "format": {
+            "singleQuote": true
+          },
+          "schemas": {
+            "https://getcomposer.org/schema.json": ["/*"],
+            "../relative/path/schema.json": ["/config*.yaml"],
+            "https://json.schemastore.org/github-workflow.json": [
+              ".github/workflows/*.yml",
+              ".github/workflows/*.yaml"
+            ]
+          }
         }
       }
     }
@@ -100,6 +174,31 @@
           "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
       },
+      "format_on_save": "on"
+    },
+    "JSONC": {
+      "formatter": {
+        "external": {
+          "command": "wsl",
+          "arguments": ["prettier", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "Python": {
+      "language_servers": ["basedpyright", "ruff"],
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    },
+    "YAML": {
+      "formatter": "language_server",
       "format_on_save": "on"
     }
   }
