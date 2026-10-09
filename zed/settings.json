@@ -17,7 +17,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash",
+      "model": "gemini-3.5-flash",
       "enable_thinking": true
     },
     "dock": "right",
@@ -73,9 +73,7 @@
     "default_width": 280
   },
   "terminal": {
-    "shell": {
-      "program": "C:\\Program Files\\Git\\bin\\bash.exe"
-    },
+    "working_directory": "first_project_directory",
     "font_family": "JetBrainsMono Nerd Font"
   },
   "git": {
@@ -192,10 +190,15 @@
         "source.organizeImports.ruff": true
       },
       "formatter": {
-        "language_server": {
-          "name": "ruff"
+        "external": {
+          "command": "ruff",
+          "arguments": [
+            "format",
+            "--stdin-filename",
+            "{buffer_path}"
+          ]
         }
-      }
+      },
     },
     "YAML": {
       "formatter": "language_server",
