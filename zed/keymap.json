@@ -62,6 +62,29 @@
     "bindings": {
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem"
+    },
+  },
+  {
+    "context": "!KeymapEditor",
+    "bindings": {
+      "ctrl-.": "zed::OpenKeymap"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-k ctrl-s": "zed::OpenKeymap"
+    }
+  },
+  {
+    "context": "KeymapEditor",
+    "unbind": {
+      "ctrl-e": "zed::OpenKeymapFile"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-.": "zed::OpenKeymapFile"
     }
   }
 ]
